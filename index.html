@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/main.css" rel="stylesheet">
+
+<title>Login</title>
+<script>
+function login() {
+ var username = document.getElementById('username').value;
+ var password = document.getElementById('password').value;
+ if(username == 'admin' && password == '123'){
+	sessionStorage.setItem('user', 'John');	
+	window.location.href = "product-list.html";	
+ }
+ else{
+	document.getElementById('message').style.display = 'block';
+ }
+}
+</script>
+</head>
+<body>
+	<div>
+		<h1>MyShop.com</h1>
+		<div>Everything just a click away. </div>
+		<div align="right" id="session"><a href="signup.html">Sign Up</a></div>
+	</div>
+<hr style="border-top: 1px solid  #f2f2f2;"></hr>
+<h3>Login ( admin / 123)</h3>
+<div class="container">
+
+  <form onclick="login();return false;">
+  	<label for="username">User Name</label>
+    <input type="text" id="username" name="username" placeholder="Your username..">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter password">
+
+	<input type="submit" id="submit" value="Submit">
+   </form>
+</div>
+
+</body>
+</html>
