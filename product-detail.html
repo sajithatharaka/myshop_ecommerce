@@ -4,22 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/main.css" rel="stylesheet">
 
-<title>Login</title>
+<title>Product Details</title>
 <script>
-function user() {
- var username = sessionStorage.getItem('user');
-	if(username != null){	
-		document.getElementById('session').innerHTML = 'Hi '+username+' , welcome back !<br><a href="#" onclick="clearSession()">Logout</a>';
+function product() {
+	const params = new URLSearchParams(window.location.search)
+	var id=params.get('id')
+	alert(id)
+	if(id == '1'){	alert(document.getElementById('1').style.visibility)
+		document.getElementById('1').style.visibility  = 'show';
+		alert(document.getElementById('1').style.visibility)
 	}
-}
-
-function clearSession() {
-	sessionStorage.removeItem('user');
-	location.reload();
 }
 </script>
 </head>
-<body onload="user()">
+<body onload="product()">
 <div>
 	<h1>MyShop.com</h1>
 	<div>Everything just a click away. </div>
@@ -31,7 +29,7 @@ function clearSession() {
 	<div><input type="text" id="search" placeholder="Search the store"> </div>
 
 	<table>
-		<tr class="container">
+		<tr class="container" id="1" style="visibility: hidden;">
 			<td>
 				<img style="height: 200px;width: 250px;" src="https://images.pexels.com/photos/3061984/pexels-photo-3061984.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="the-cat hovered">
 			</td>
@@ -40,12 +38,12 @@ function clearSession() {
 					ELECTRONIC KEYBOARD ORGAN PIANO (32 KEYS ELECTRONIC ORGAN KEYBOARD TOY WITH MINI MICROPHONE MUSICAL INSTRUMENTS PIANO FOR CHILDREN
 				</span>
 				<p>RS. 2,850</p>
-				<a href="product-detail.html?id=1"><button class="button-quick-view">
+				<button class="button-quick-view" onclick="window.location.href='/shops/deliveryProductPreview.jsp?id=kidstoy0Z1233'">
 					<span>See Details</span>
-				</button></a>
+				</button>
 			</td>
 		</tr>
-		<tr class="container">
+		<tr class="container" id="2" style="visibility: hidden;">
 			<td>
 				<img style="height: 250px;width: 250px;" src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg" class="the-cat hovered">
 			</td>
@@ -59,7 +57,7 @@ function clearSession() {
 				</button>
 			</td>
 		</tr>
-		<tr class="container">
+		<tr class="container" style="visibility: hidden;">
 			<td>
 				<img style="height: 200px;width: 150px;" src="https://images.pexels.com/photos/1405355/pexels-photo-1405355.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="the-cat hovered">
 			</td>
