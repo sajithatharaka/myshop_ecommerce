@@ -6,18 +6,27 @@
 
 <title>Product Details</title>
 <script>
+function user() {
+ var username = sessionStorage.getItem('user');
+	if(username != null){	
+		document.getElementById('session').innerHTML = 'Hi '+username+' , welcome back !<br><a href="#" onclick="clearSession()">Logout</a>';
+	}
+}
+
 function product() {
 	const params = new URLSearchParams(window.location.search)
 	var id=params.get('id')
-	alert(id)
-	if(id == '1'){	alert(document.getElementById('1').style.visibility)
-		document.getElementById('1').style.visibility  = 'show';
-		alert(document.getElementById('1').style.visibility)
-	}
+		document.getElementById(id).style.display  = 'block';
 }
+
+function clearSession() {
+	sessionStorage.removeItem('user');
+	location.reload();
+}
+
 </script>
 </head>
-<body onload="product()">
+<body onload="product();user()">
 <div>
 	<h1>MyShop.com</h1>
 	<div>Everything just a click away. </div>
@@ -27,9 +36,10 @@ function product() {
 
 <div>
 	<div><input type="text" id="search" placeholder="Search the store"> </div>
-
+	<div><a href="index.html"> Home</a></div>
+<center>
 	<table>
-		<tr class="container" id="1" style="visibility: hidden;">
+		<tr class="container" id="1" style="display: none;width: 1000px;">
 			<td>
 				<img style="height: 200px;width: 250px;" src="https://images.pexels.com/photos/3061984/pexels-photo-3061984.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="the-cat hovered">
 			</td>
@@ -37,13 +47,12 @@ function product() {
 				<span class="text-gray">
 					ELECTRONIC KEYBOARD ORGAN PIANO (32 KEYS ELECTRONIC ORGAN KEYBOARD TOY WITH MINI MICROPHONE MUSICAL INSTRUMENTS PIANO FOR CHILDREN
 				</span>
+				<p>This RockJam keyboard piano features 54 full size keys that gives this keyboard a traditional piano feel<br>
+					Compact and portable the RockJam 54 keyboard piano can be powered by either batteries and mains power (power supply included.) making it perfect for use both in the home and on the road</p>
 				<p>RS. 2,850</p>
-				<button class="button-quick-view" onclick="window.location.href='/shops/deliveryProductPreview.jsp?id=kidstoy0Z1233'">
-					<span>See Details</span>
-				</button>
 			</td>
 		</tr>
-		<tr class="container" id="2" style="visibility: hidden;">
+		<tr class="container" id="2" style="display: none;width: 1000px;">
 			<td>
 				<img style="height: 250px;width: 250px;" src="https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg" class="the-cat hovered">
 			</td>
@@ -51,28 +60,33 @@ function product() {
 				<span class="text-gray">
 					THUNGSTON BULB, 40W
 				</span>
+				<p>40W 410 Lumen, 2700K Warm White Light.<br>
+					E27 Edison screw base.<br>
+					Diameter: 80mm x Height: 120mm. Voltage:220-240V. <br>
+					Dimmable: Compatible with most dimmers.<br>
+					Great value pack of 2 vintage filament E27 screw light bulbs.</p>
 				<p>Rs. 950</p>
-				<button class="button-quick-view" onclick="window.location.href='/shops/deliveryProductPreview.jsp?id=kidstoy0Z1233'">
-					<span>See Details</span>
-				</button>
+				
 			</td>
 		</tr>
-		<tr class="container" style="visibility: hidden;">
+		<tr class="container" id="3" style="display: none;width: 1000px;">
 			<td>
-				<img style="height: 200px;width: 150px;" src="https://images.pexels.com/photos/1405355/pexels-photo-1405355.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="the-cat hovered">
+				<img style="height:300px;width: 250px;" src="https://images.pexels.com/photos/1405355/pexels-photo-1405355.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="the-cat hovered">
 			</td>
 			<td style="padding: 20px;">
 				<span class="text-gray">
 					TENNIS BALL, DUNLOP, 155
 				</span>
+				<p>Designed for providing ball control<br>
+					Maximum ease of handling<br>
+					Its size and light weight make it easy to handle for rallies<br>
+					Its soft rubbers and blade make shots close at hand.</p>
 				<p>RS. 2,850</p>
-				<button class="button-quick-view" onclick="window.location.href='/shops/deliveryProductPreview.jsp?id=kidstoy0Z1233'">
-					<span>See Details</span>
-				</button>
+				
 			</td>
 		</tr>
 	</table>
+</center>
 </div>
-
 </body>
 </html>
