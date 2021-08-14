@@ -5,22 +5,25 @@ This is used only for demo purposes
 
 ### 1. Verify the user can login to the MyShop.com
 
+- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as admin
 - Enter the password as 123
 - Click Login
 
 Expected - Should be able to login
 
-### 2. Verify the user cannot login to the [MyShop.com](http://myshop.com) with a wrong password
+### 2. Verify the user cannot login to the MyShop.com with a wrong password
 
+- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as admin
 - Enter the password as 1234
 - Click Login
 
 Expected - Should not be able to login
 
-### 3. Verify the user cannot login to the [MyShop.com](http://myshop.com) with a wrong username
+### 3. Verify the user cannot login to the MyShop.com with a wrong username
 
+- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as user
 - Enter the password as 123
 - Click Login
@@ -38,7 +41,7 @@ Expected - Should not be able to login
 
 Expected - Should display the successful alert
 
-### 5. Verify the user cannot Signup to the [MyShop.com](http://myshop.com) when re-enter password is different
+### 5. Verify the user cannot Signup to the MyShop.com when re-enter password is different
 
 - Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Click on SignUp link from the home page
@@ -49,7 +52,7 @@ Expected - Should display the successful alert
 
 Expected - Should display the alert Entered passwords are different.
 
-### 6. Verify the user cannot Signup to the [MyShop.com](http://myshop.com) without entering password
+### 6. Verify the user cannot Signup to the MyShop.com without entering password
 
 - Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Click on SignUp link from the home page
@@ -69,6 +72,7 @@ Expected - User should be able to view the product details
 
 ### 8. Verify the user name is shown after login
 
+- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as admin
 - Enter the password as 123
 - Click Login
@@ -77,7 +81,7 @@ Expected - Hi John, Welcome back ! message should be shown to the user
 
 ### 9. Verify the user can go logout
 
-Precondition - user should login
+Precondition - user should login to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 
 - Logout link should be visible
 - Click on the Logout link
