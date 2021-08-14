@@ -6,7 +6,16 @@
 <title>Sign Up</title>
 <script>
 	function register() {
-	 alert("Successfully Registered")
+		var repassword=document.getElementById('re-password').value;
+		var password=document.getElementById('password').value;
+
+		if(repassword==''|| password==''){
+			alert('Please enter a passwords to proceed');
+		}else if(password!=repassword){
+			alert("Entered passwords are different.");
+		}else{
+			alert("Successfully Registered");
+		}
 	}
 	</script>
 </head>
@@ -17,10 +26,10 @@
 		<div align="right" id="session"><a href="login.html">Login</a></div>
 	</div>
 <hr style="border-top: 1px solid  #f2f2f2;"></hr>
-<h3>Regsiter </h3>
+<h3>Register </h3>
 <div class="container">
 
-  <form onclick="register();return false;">
+  <form onsubmit="register();return false;">
   	<label for="username">User Name</label>
     <input type="text" id="username" name="username" placeholder="Your username..">
 
@@ -30,7 +39,7 @@
 	<label for="re-password">Re-Enter Password</label>
     <input type="password" id="re-password" name="re-password" placeholder="Re-enter password">
 
-	<input type="submit" id="submit" value="Regsiter">
+	<input type="submit" id="submit" value="Register">
    </form>
 </div>	
 

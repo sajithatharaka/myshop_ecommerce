@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/main.css" rel="stylesheet">
+<title>Shipping Details</title>
+<script>
+	function register() {
+		if(document.getElementById('shipping_house').value==''){
+			alert('Please enter a house number to proceed')
+		}else if(document.getElementById('country').value==''){			
+			alert('Please enter a country to proceed')
+		}else if(isNaN(document.getElementById('country').value)){			
+			alert('Please enter a correct name for the country to proceed')
+		}else{
+			alert("Successfully Saved");	
+		}
+	}
+		
+		
+	</script>
+</head>
+<body>
+	<div>
+		<h1>MyShop.com</h1>
+		<div>Everything just a click away. </div>
+		<div align="right" id="session"><a href="login.html">Login</a></div>
+	</div>	
+<hr style="border-top: 1px solid  #f2f2f2;"></hr>
+<div><a href="index.html"> Home</a></div>
+<h3>Shipping Details </h3>
+<div class="container">
+
+  <form onsubmit="register();return false;">
+  	<label for="shipping_house">House Number</label>
+    <input type="text" id="shipping_house" name="shipping_house">
+    
+	<label for="street">Street</label>
+    <input type="text" id="street" name="street">
+	
+	<label for="town">Town/City</label>
+    <input type="text" id="town" name="town">
+
+	<label for="town">Country</label>
+    <input type="text" id="country" name="country">
+
+	<input type="submit" id="submit" value="Submit">
+   </form>
+</div>	
+
+</body>
+</html>

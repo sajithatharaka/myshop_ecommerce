@@ -9,7 +9,7 @@
 function user() {
  var username = sessionStorage.getItem('user');
 	if(username != null){	
-		document.getElementById('session').innerHTML = 'Hi '+username+' , welcome back !<br><a href="#" onclick="clearSession()">Logout</a>';
+		document.getElementById('session').innerHTML = 'Hi '+username+', Welcome back !<br><a href="#" onclick="clearSession()">Logout</a>';
 	}
 }
 
@@ -23,7 +23,11 @@ function clearSession() {
 <div>
 	<h1>MyShop.com</h1>
 	<div>Everything just a click away. </div>
-	<div align="right" id="session"><a href="signup.html">Sign Up</a> | <a href="login.html">Login</a></div>
+	<div align="right" id="session">
+		<a href="signup.html">Sign Up</a> | 
+		<a href="login.html">Login</a> | 
+		<a href="seller.html">Become a Seller View</a>
+	</div>
 </div>
 <hr style="border-top: 1px solid  #f2f2f2;"></hr>
 
@@ -67,7 +71,7 @@ function clearSession() {
 				<span class="text-gray">
 					TENNIS BALL, DUNLOP, 155
 				</span>
-				<p>RS. 2,850</p>
+				<p>RS. 850</p>
 				<a href="product-detail.html?id=3"><button class="button-quick-view">
 					<span>See Details</span>
 				</button></a>

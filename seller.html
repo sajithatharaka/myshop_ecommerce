@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/main.css" rel="stylesheet">
+
+<title>Seller Details</title>
+<script>
+function seller() {
+	 alert("Successfully Registered");
+}
+
+function clearSession() {
+	sessionStorage.removeItem('user');
+	location.reload();
+}
+
+</script>
+</head>
+<body onload="user()">
+<div>
+	<h1>MyShop.com</h1>
+	<div>Everything just a click away. </div>
+	<div align="right" id="session"><a href="signup.html">Sign Up</a> | <a href="login.html">Login</a></div>
+</div>
+<hr style="border-top: 1px solid  #f2f2f2;"></hr>
+
+<div>
+	<form onsubmit="seller();return false;">
+		<label for="company_name">Company Name</label>
+	  <input type="text" id="company_name" name="company_name" placeholder="Your company..">
+  
+	  <label for="company_email">Comapny Email</label>
+	  <input type="text" id="company_email" name="company_email">
+
+	  <label for="company_email">Phone Number</label>
+	  <input type="text" id="phone" name="phone">
+
+	  <label for="company_registration">Company Registration</label>
+	  <input type="text" id="company_registration" name="company_registration">
+  
+	  <input type="submit" id="submit" value="Submit">
+	 </form>
+</div>
+
+</body>
+</html>

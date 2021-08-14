@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/main.css" rel="stylesheet">
 
-<title>Product Details</title>
+<title>Buy Product</title>
 <script>
 function user() {
  var username = sessionStorage.getItem('user');
@@ -22,6 +22,10 @@ function product() {
 function clearSession() {
 	sessionStorage.removeItem('user');
 	location.reload();
+}
+
+function getTotal(id) {
+	document.getElementById('total'+id).innerHTML="Rs. "+document.getElementById('quantity'+id).value*document.getElementById('price'+id).innerHTML
 }
 
 </script>
@@ -49,10 +53,17 @@ function clearSession() {
 				</span>
 				<p>This RockJam keyboard piano features 54 full size keys that gives this keyboard a traditional piano feel<br>
 					Compact and portable the RockJam 54 keyboard piano can be powered by either batteries and mains power (power supply included.) making it perfect for use both in the home and on the road</p>
-				<p>RS. 2,850</p>
-				<a href="buy.html?id=1"><button class="button-quick-view">
-					<span>Buy</span>
-				</button></a>
+				<p>RS. <span id="price1">2850</span></p>
+				 
+				<label for="quantity">Quantity</label>
+				<input type="number" id="quantity1" name="quantity">
+				<a onclick="getTotal(1)">
+					<button class="button-quick-view">
+						<span>Buy</span>
+					</button>
+				</a>
+				<br><br><div id="total1"></div>
+
 			</td>
 		</tr>
 		<tr class="container" id="2" style="display: none;width: 1000px;">
@@ -68,10 +79,16 @@ function clearSession() {
 					Diameter: 80mm x Height: 120mm. Voltage:220-240V. <br>
 					Dimmable: Compatible with most dimmers.<br>
 					Great value pack of 2 vintage filament E27 screw light bulbs.</p>
-				<p>Rs. 950</p>
-				<a href="buy.html?id=2"><button class="button-quick-view">
-					<span>Buy</span>
-				</button></a>
+				<p>RS. <span id="price2">950</span></p>
+				<label for="quantity">Quantity</label>
+				<input type="number" id="quantity2" name="quantity">
+				<a onclick="getTotal(2)">
+					<button class="button-quick-view">
+						<span>Buy</span>
+					</button>
+				</a>
+				<br><br><div id="total2"></div>
+
 				
 			</td>
 		</tr>
@@ -87,14 +104,27 @@ function clearSession() {
 					Maximum ease of handling<br>
 					Its size and light weight make it easy to handle for rallies<br>
 					Its soft rubbers and blade make shots close at hand.</p>
-				<p>RS. 850</p>
-				<a href="buy.html?id=3"><button class="button-quick-view">
-					<span>Buy</span>
-				</button></a>
+				<p>RS. <span id="price3">850</span></p>
+				<label for="quantity">Quantity</label>
+				<input type="number" id="quantity3" name="quantity">
+				<a onclick="getTotal(3)">
+					<button class="button-quick-view">
+						<span>Buy</span>
+					</button>
+				</a>
+				<br><br><div id="total3"></div>
 				
 			</td>
 		</tr>
 	</table>
+	<div class="container" style="width: 1000px;">
+		<a href="shipping_details.html">
+			<button class="button-quick-view">
+				<span>Check Out</span>
+			</button>
+		</a>
+	</div>
+	
 </center>
 </div>
 </body>

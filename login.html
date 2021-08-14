@@ -14,7 +14,7 @@ function login() {
 	window.location.href = "index.html";	
  }
  else{
-	document.getElementById('message').style.display = 'block';
+	 alert("Invalid username or password!")
  }
 }
 </script>
@@ -29,7 +29,7 @@ function login() {
 <h3>Login ( admin / 123)</h3>
 <div class="container">
 
-  <form onclick="login();return false;">
+  <form onsubmit="login();return false;">
   	<label for="username">User Name</label>
     <input type="text" id="username" name="username" placeholder="Your username..">
 
