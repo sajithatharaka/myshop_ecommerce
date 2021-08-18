@@ -10,7 +10,7 @@
 			alert('Please enter a house number to proceed')
 		}else if(document.getElementById('country').value==''){			
 			alert('Please enter a country to proceed')
-		}else if(isNaN(document.getElementById('country').value)){			
+		}else if(!isNaN(document.getElementById('country').value)){			
 			alert('Please enter a correct name for the country to proceed')
 		}else{
 			alert("Successfully Saved");	
