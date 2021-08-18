@@ -5,16 +5,14 @@ This is used only for demo purposes
 
 ### 1. Verify the user can login to the MyShop.com
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as admin
 - Enter the password as 123
 - Click Login
 
-Expected - Should be able to login
+Expected - Should be able to login and view Home page
 
 ### 2. Verify the user cannot login to the MyShop.com with a wrong password
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as admin
 - Enter the password as 1234
 - Click Login
@@ -23,14 +21,21 @@ Expected - Should not be able to login
 
 ### 3. Verify the user cannot login to the MyShop.com with a wrong username
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as user
 - Enter the password as 123
 - Click Login
 
 Expected - Should not be able to login
 
-### 4. Verify the user can Signup to the MyShop.com
+### 4. Verify the user cannot login to the MyShop.com with a wrong password and wrong password
+
+- Enter the user name as admin123
+- Enter the password as 1234
+- Click Login
+
+Expected - Should not be able to login
+
+### 5. Verify the user can Signup to the MyShop.com
 
 - Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Click on SignUp link from the home page
@@ -41,7 +46,7 @@ Expected - Should not be able to login
 
 Expected - Should display the successful alert
 
-### 5. Verify the user cannot Signup to the MyShop.com when re-enter password is different
+### 6. Verify the user cannot Signup to the MyShop.com when re-enter password is different
 
 - Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Click on SignUp link from the home page
@@ -52,7 +57,29 @@ Expected - Should display the successful alert
 
 Expected - Should display the alert Entered passwords are different.
 
-### 6. Verify the user cannot Signup to the MyShop.com without entering password
+### 7. Verify the user cannot Signup to the MyShop.com without entering password
+
+- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+- Click on SignUp link from the home page
+- Enter the user name as Admin
+- Leave the password blank
+- Enter the password re-enter 123
+- Click Register
+
+Expected - Should display the alert Please enter a passwords to proceed.
+
+### 8. Verify the user cannot Signup to the MyShop.com without re-entering password
+
+- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+- Click on SignUp link from the home page
+- Enter the user name as Admin
+- Enter the password 123
+- Leave the password re-enter blank
+- Click Register
+
+Expected - Should display the alert Please enter a passwords to proceed.
+
+### 9. Verify the user cannot Signup to the MyShop.com without entering password and re-enter password
 
 - Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Click on SignUp link from the home page
@@ -63,118 +90,162 @@ Expected - Should display the alert Entered passwords are different.
 
 Expected - Should display the alert Please enter a passwords to proceed.
 
-### 7. Verify the user can view product details
+### 10. Verify the user can view product details
 
 - Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Click on the See Details button of a product
 
 Expected - User should be able to view the product details
 
-### 8. Verify the user name is shown after login
+### 11. Verify the user name is shown after login
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
 - Enter the user name as admin
 - Enter the password as 123
 - Click Login
 
 Expected - Hi John, Welcome back ! message should be shown to the user
 
-### 9. Verify the user can go logout
+### 12. Verify the user can logout
 
-Precondition - user should login to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+Precondition - user should login
 
 - Logout link should be visible
 - Click on the Logout link
 
 Expected - user should navigate to the Home page
 
-### 10.Verify user can click buy and proceed to buy screen
+### 13.Verify user can click buy and proceed to buy screen
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details
-- Click Buy
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details
+
+Click Buy
 
 Expected - User should go to the buy screen
 
-### 11.Verify user can specify the quantity in the buy screen
+### 14.Verify user can specify the quantity in the buy screen
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details
-- Click Buy
-- Enter quantity as 10
-- Click Buy
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details
+
+Click Buy
+
+Enter quantity as 10
+
+Click Buy
 
 Expected - Entered quantity should be  10
 
-### 12.Verify user cannot enter letters in the quantity fields
+### 15.Verify user cannot enter letters in the quantity fields
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details
-- Click Buy
-- Enter quantity as  abc
-- Click Buy
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details
+
+Click Buy
+
+Enter quantity as  abc
+
+Click Buy
 
 Expected - Field should not accept any letters
 
-### 13.Verify user can view the total amount going to spend
+### 16.Verify user can view the total amount going to spend
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details for the THUNGSTON BULB, 40W
-- Click Buy
-- Enter quantity as 10
-- Click Buy
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details for the THUNGSTON BULB, 40W
+
+Click Buy
+
+Enter quantity as 10
+
+Click Buy
 
 Expected - Total amount should be Rs. 9500
 
-### 14.Verify user can checkout and enter shipping details
+### 17.Verify user can checkout and enter shipping details
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details for the THUNGSTON BULB, 40W
-- Click Buy
-- Enter quantity as 10
-- Click Buy
-- Click Checkout
-- Enter house number, street, town and country
-- Click Submit
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details for the THUNGSTON BULB, 40W
+
+Click Buy
+
+Enter quantity as 10
+
+Click Buy
+
+Click Checkout
+
+Enter house number, street, town and country
+
+Click Submit
 
 Expected - Successfully Saved alert should be displayed
 
-### 15.Verify a validation message is shown when the house number is empty
+---
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details for the THUNGSTON BULB, 40W
-- Click Buy
-- Enter quantity as 10
-- Click Buy
-- Click Checkout
-- Do not enter house number
-- Click Submit
+### 18.Verify a validation message is shown when the house number is empty
+
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details for the THUNGSTON BULB, 40W
+
+Click Buy
+
+Enter quantity as 10
+
+Click Buy
+
+Click Checkout
+
+Do not enter house number
+
+Click Submit
 
 Expected - Please enter a house number to proceed message should appear
 
-### 16.Verify a validation message is shown when the country is empty
+### 19.Verify a validation message is shown when the country is empty
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details for the THUNGSTON BULB, 40W
-- Click Buy
-- Enter quantity as 10
-- Click Buy
-- Click Checkout
-- Enter house number as 1
-- Click Submit
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details for the THUNGSTON BULB, 40W
+
+Click Buy
+
+Enter quantity as 10
+
+Click Buy
+
+Click Checkout
+
+Enter house number as 1
+
+Click Submit
 
 Expected - Please enter a country to proceed message should appear
 
-### 17.Verify a validation message is shown when entered digits for the country
+### 20.Verify a validation message is shown when entered digits for the country
 
-- Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
-- Click See Details for the THUNGSTON BULB, 40W
-- Click Buy
-- Enter quantity as 10
-- Click Buy
-- Click Checkout
-- Enter house number as 1
-- Enter country as 123
-- Click Submit
+Go to [https://sajithatharaka.github.io/myshop_ecommerce/](https://sajithatharaka.github.io/myshop_ecommerce/)
+
+Click See Details for the THUNGSTON BULB, 40W
+
+Click Buy
+
+Enter quantity as 10
+
+Click Buy
+
+Click Checkout
+
+Enter house number as 1
+
+Enter country as 123
+
+Click Submit
 
 Expected - Please enter a correct name for the country to proceed message should appear
