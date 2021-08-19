@@ -9,7 +9,7 @@
 function user() {
  var username = sessionStorage.getItem('user');
 	if(username != null){	
-		document.getElementById('session').innerHTML = 'Hi '+username+', Welcome back !<br><a href="#" onclick="clearSession()">Logout</a>';
+		document.getElementById('session').innerHTML = '<span>Hi '+username+', Welcome back !</span><br><a href="#" onclick="clearSession()">Logout</a>';
 	}
 }
 
