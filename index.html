@@ -9,7 +9,7 @@
 function user() {
  var username = sessionStorage.getItem('user');
 	if(username != null){	
-		document.getElementById('session').innerHTML = '<span>Hi '+username+', Welcome back !</span><br><a href="#" onclick="clearSession()">Logout</a>';
+		document.getElementById('session').innerHTML = '<span id="logeed-user">Hi '+username+', Welcome back !</span><br><a id="logout" href="#" onclick="clearSession()">Logout</a>';
 	}
 }
 
@@ -24,8 +24,8 @@ function clearSession() {
 	<h1>MyShop.com</h1>
 	<div>Everything just a click away. </div>
 	<div align="right" id="session">
-		<a href="signup.html">Sign Up</a> | 
-		<a href="login.html">Login</a> | 
+		<a href="signup.html" id="signup">Sign Up</a> | 
+		<a href="login.html" id="login">Login</a> | 
 		<a href="seller.html">Become a Seller View</a>
 	</div>
 </div>
@@ -45,7 +45,7 @@ function clearSession() {
 				</span>
 				<p>RS. 2,850</p>
 				<a href="product-detail.html?id=1"><button class="button-quick-view">
-					<span>See Details</span>
+					<span id="product-1">See Details</span>
 				</button></a>
 			</td>
 		</tr>
@@ -59,7 +59,7 @@ function clearSession() {
 				</span>
 				<p>Rs. 950</p>
 				<a href="product-detail.html?id=2"><button class="button-quick-view">
-					<span>See Details</span>
+					<span  id="product-2">See Details</span>
 				</button></a>
 			</td>
 		</tr>
@@ -73,7 +73,7 @@ function clearSession() {
 				</span>
 				<p>RS. 850</p>
 				<a href="product-detail.html?id=3"><button class="button-quick-view">
-					<span>See Details</span>
+					<span  id="product-3">See Details</span>
 				</button></a>
 			</td>
 		</tr>
